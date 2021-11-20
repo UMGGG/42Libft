@@ -6,7 +6,7 @@
 /*   By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 18:05:39 by jaeyjeon          #+#    #+#             */
-/*   Updated: 2021/11/20 17:24:42 by jaeyjeon         ###   ########.fr       */
+/*   Updated: 2021/11/20 19:45:22 by jaeyjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void    ft_bzero(void *s, size_t n)
 {
     char    *str;
-    int     i;
+    size_t     i;
 
     str = s;
     i = 0;
@@ -24,5 +24,4 @@ void    ft_bzero(void *s, size_t n)
         str[i] = 0;
         i++;
     }
-    return (s);
 }

@@ -6,7 +6,7 @@
 /*   By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 17:51:07 by jaeyjeon          #+#    #+#             */
-/*   Updated: 2021/11/20 17:24:51 by jaeyjeon         ###   ########.fr       */
+/*   Updated: 2021/11/20 19:42:39 by jaeyjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void    *ft_memset(void *b, int c, size_t len)
 {
     char    *str;
-    int     i;
+    size_t     i;
 
     str = b;
     i = 0;
