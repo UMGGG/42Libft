@@ -6,7 +6,7 @@
 /*   By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 17:21:25 by jaeyjeon          #+#    #+#             */
-/*   Updated: 2021/11/21 17:46:55 by jaeyjeon         ###   ########.fr       */
+/*   Updated: 2021/11/22 16:50:57 by jaeyjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,10 @@
 size_t ft_strlcat(char *dst, const char *src, size_t size)
 {
     char    *cdest;
-	char    *csrc;
 	size_t  destlen;
 	size_t  left;
 
 	cdest = dst;
-	csrc = src;
 	left = size;
 	while (left-- != 0 && *cdest != '\0')
 		cdest++;
@@ -38,5 +36,5 @@ size_t ft_strlcat(char *dst, const char *src, size_t size)
 		src++;
 	}
 	*cdest = '\0';
-	return (destlen + ft_strlen(csrc));
+	return (destlen + ft_strlen(src));
 }
