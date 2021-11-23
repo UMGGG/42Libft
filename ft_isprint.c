@@ -6,15 +6,15 @@
 /*   By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 14:31:41 by jaeyjeon          #+#    #+#             */
-/*   Updated: 2021/11/20 17:24:37 by jaeyjeon         ###   ########.fr       */
+/*   Updated: 2021/11/23 17:12:51 by jaeyjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-    if (c >= 32 && c <= 126)
-        return (1);
-    return (0);
+	if (c >= 32 && c <= 126)
+		return (1);
+	return (0);
 }

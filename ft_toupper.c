@@ -6,17 +6,17 @@
 /*   By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/21 17:43:20 by jaeyjeon          #+#    #+#             */
-/*   Updated: 2021/11/21 17:46:58 by jaeyjeon         ###   ########.fr       */
+/*   Updated: 2021/11/23 17:11:54 by jaeyjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
-    if (c >= 97 && c <= 122)
-    {
-        c -= 32;
-    }
-    return (c);
+	if (c >= 97 && c <= 122)
+	{
+		c -= 32;
+	}
+	return (c);
 }

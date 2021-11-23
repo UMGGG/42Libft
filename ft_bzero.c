@@ -6,16 +6,16 @@
 /*   By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 18:05:39 by jaeyjeon          #+#    #+#             */
-/*   Updated: 2021/11/20 19:45:22 by jaeyjeon         ###   ########.fr       */
+/*   Updated: 2021/11/23 17:04:14 by jaeyjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-    char    *str;
-    size_t     i;
+    char	*str;
+    size_t	i;
 
     str = s;
     i = 0;
