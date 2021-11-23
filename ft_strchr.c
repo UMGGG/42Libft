@@ -6,7 +6,7 @@
 /*   By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 13:34:19 by jaeyjeon          #+#    #+#             */
-/*   Updated: 2021/11/23 17:10:27 by jaeyjeon         ###   ########.fr       */
+/*   Updated: 2021/11/24 00:35:42 by jaeyjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ char	*ft_strchr(const char *s, int c)
 	while (s[i] != '\0')
 	{
 		if (s[i] == (char)c)
-			return ((char*)s + i);
+			return ((char *)s + i);
 		i++;
 	}
-	return ((char*)s + i);
+	return ((char *)s + i);
 }

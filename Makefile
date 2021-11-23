@@ -6,7 +6,7 @@
 #    By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/20 19:29:07 by jaeyjeon          #+#    #+#              #
-#    Updated: 2021/11/22 18:29:28 by jaeyjeon         ###   ########.fr        #
+#    Updated: 2021/11/24 00:36:35 by jaeyjeon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,11 +31,11 @@ $(NAME):
 
 clean:
 				$(RM) $(OBJS)
-	
+
 fclean:		clean
 				$(RM) $(NAME)
 				$(RM) libft.h.gch
-				
+
 re:			fclean $(NAME)
 
 .PHONY:		all clean fclean re

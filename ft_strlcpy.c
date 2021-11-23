@@ -6,7 +6,7 @@
 /*   By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 17:51:52 by jaeyjeon          #+#    #+#             */
-/*   Updated: 2021/11/23 17:11:04 by jaeyjeon         ###   ########.fr       */
+/*   Updated: 2021/11/24 00:36:10 by jaeyjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 
 	i = 0;
 	if (size == 0)
-	return (ft_strlen(src));
+		return (ft_strlen(src));
 	while (i < (size - 1) && src[i] != '\0')
 	{
 		dst[i] = src[i];
 		i++;
 	}
 	dst[i] = '\0';
-	return(ft_strlen(src));
+	return (ft_strlen(src));
 }

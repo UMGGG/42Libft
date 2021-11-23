@@ -6,14 +6,14 @@
 /*   By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 15:10:18 by jaeyjeon          #+#    #+#             */
-/*   Updated: 2021/11/23 17:08:22 by jaeyjeon         ###   ########.fr       */
+/*   Updated: 2021/11/24 00:33:13 by jaeyjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isdigit(int c)
 {
-    if (c >= '0' && c <= '9')
-        return (1);
-    else
-        return (0);
+	if (c >= '0' && c <= '9')
+		return (1);
+	else
+		return (0);
 }

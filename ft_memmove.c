@@ -6,7 +6,7 @@
 /*   By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 16:25:25 by jaeyjeon          #+#    #+#             */
-/*   Updated: 2021/11/23 17:09:48 by jaeyjeon         ###   ########.fr       */
+/*   Updated: 2021/11/24 00:36:55 by jaeyjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memmove(void *dst, const void *src, size_t l)
 {
 	char	*tmp;
 	size_t	i;
-	
+
 	i = 0;
 	tmp = dst;
 	if (src == NULL && dst == NULL)
@@ -24,18 +24,18 @@ void	*ft_memmove(void *dst, const void *src, size_t l)
 	if (dst < src)
 	{
 		while (i < l)
-			{
-				((unsigned char *)tmp)[i] = ((unsigned char *)src)[i];
-				i++;
-			}
+		{
+			((unsigned char *)tmp)[i] = ((unsigned char *)src)[i];
+			i++;
+		}
 	}
 	else
 	{
 		while (i < l)
 		{
-			((unsigned char *)tmp)[l -1 -i] = ((unsigned char *)src)[l -1 -i];
+			((unsigned char *)tmp)[l - 1 - i] = ((unsigned char *)src)[l - 1 - i];
 			i++;
-		}    
+		}
 	}
 	return (dst);
 }
