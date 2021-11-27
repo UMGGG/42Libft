@@ -6,7 +6,7 @@
 /*   By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 16:48:42 by jaeyjeon          #+#    #+#             */
-/*   Updated: 2021/11/27 18:20:39 by jaeyjeon         ###   ########.fr       */
+/*   Updated: 2021/11/28 01:06:25 by jaeyjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,13 +38,4 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		i++;
 	}
 	return (NULL);
-}
-#include <stdio.h>
-#include <string.h>
-int main()
-{
-	char a[32] = " a b c 1 2 3";
-	char b[32] = " a b c 123";
-	printf("%s\n", ft_strnstr(a, b, 7));
-	printf("%s", strnstr(a, b, 6));
 }
