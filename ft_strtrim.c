@@ -6,7 +6,7 @@
 /*   By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 20:09:28 by jaeyjeon          #+#    #+#             */
-/*   Updated: 2021/12/11 12:49:09 by jaeyjeon         ###   ########.fr       */
+/*   Updated: 2021/12/13 00:00:34 by jaeyjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@ int	checkchar(char a, char const *b)
 {
 	int	i;
 
-	i = 0;
-	while (b[i] != '\0')
+	i = ft_strlen(b);
+	while (i >= 0)
 	{
 		if (b[i] == a)
 			return (1);
-		i++;
+		i--;
 	}
 	return (0);
 }
@@ -29,28 +29,17 @@ int	checkchar(char a, char const *b)
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*str;
-	int		i;
-	int		j;
-	int		strlen;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
-	j = 0;
-	strlen = (int)(ft_strlen(s1) - 1);
-	while (checkchar(s1[i], set) == 1)
+	j = ft_strlen(s1);
+	if (s1 == 0)
+		return (0);
+	while (s1[i] && checkchar(s1[i], set))
 		i++;
-	while (checkchar(s1[strlen], set) == 1)
-		strlen--;
-	str = malloc(sizeof(char) * (strlen + 1));
-	if (str == 0)
-		return (NULL);
-	j = i;
-	i = 0;
-	while (j != (strlen + 1))
-	{
-		str[i] = s1[j];
-		i++;
-		j++;
-	}
-	str[i] = '\0';
+	while (s1[j - 1] && checkchar(s1[j], set) && i < j)
+		j--;
+	str = ft_substr(s1, i, j - i + 1);
 	return (str);
 }
