@@ -6,7 +6,7 @@
 #    By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/20 19:29:07 by jaeyjeon          #+#    #+#              #
-#    Updated: 2021/12/11 12:45:59 by jaeyjeon         ###   ########.fr        #
+#    Updated: 2021/12/17 18:06:22 by jaeyjeon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ SRCS		= ft_memset.c ft_memmove.c ft_memcpy.c ft_isprint.c ft_isdigit.c \
 				ft_strlcpy.c ft_tolower.c ft_toupper.c ft_strchr.c \
 				ft_strrchr.c ft_strlen.c ft_memchr.c ft_memcmp.c ft_strnstr.c \
 				ft_strncmp.c ft_atoi.c ft_calloc.c ft_strdup.c ft_substr.c \
-				ft_strjoin.c ft_strtrim.c
+				ft_strjoin.c ft_strtrim.c ft_split.c
 
 
 OBJS		= $(SRCS:.c=.o)
