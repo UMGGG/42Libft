@@ -6,12 +6,11 @@
 /*   By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 00:09:14 by jaeyjeon          #+#    #+#             */
-/*   Updated: 2021/12/18 01:10:11 by jaeyjeon         ###   ########.fr       */
+/*   Updated: 2021/12/20 01:06:35 by jaeyjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_strndup(const char *s, size_t n)
 {
@@ -84,14 +83,14 @@ char	**ft_split(char const *s, char c)
 	strlist = (char **)malloc(sizeof(char *) * ft_wordcount(s, c) + 1);
 	if (!strlist)
 		return (NULL);
-	while (i < ft_wordcount(s, c) && s[k] != '\n')
+	while (i < ft_wordcount(s, c) && s[k] != '\0')
 	{
 		if (s[k] == c)
 			k++;
 		else
 		{
 			save = k;
-			while (s[k] != c && s[k] != '\n')
+			while (s[k] != c && s[k] != '\0')
 			{
 				j++;
 				k++;
@@ -105,13 +104,4 @@ char	**ft_split(char const *s, char c)
 	}
 	strlist[i] = 0;
 	return (strlist);
-}
-
-int main()
-{
-	char		**strr;
-	const char	*str = "1212a1233a44a233";
-
-	strr = ft_split(str, 'a');
-	printf("%s\n%s\n%s\n%s\n%s\n",strr[0], strr[1],strr[2],strr[3],strr[4]);
 }

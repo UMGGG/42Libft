@@ -6,7 +6,7 @@
 /*   By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 02:07:50 by jaeyjeon          #+#    #+#             */
-/*   Updated: 2021/12/10 02:32:56 by jaeyjeon         ###   ########.fr       */
+/*   Updated: 2021/12/20 01:30:13 by jaeyjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,26 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	strlen;
-	size_t	sublen;
+	size_t	i;
+	size_t	j;
 	char	*sub;
 
-	strlen = len;
-	sublen = 0;
+	i = 0;
+	j = 0;
+	if (!s)
+		return (NULL);
 	sub = (char *)malloc(sizeof(char) * (len + 1));
 	if (sub == 0)
 		return (NULL);
-	while (s[start] != '\0' && strlen != 0)
+	while (s[i])
 	{
-		sub[sublen] = s[start];
-		start++;
-		strlen--;
-		sublen++;
+		if (i >= start && j < len)
+		{
+			sub[j] = s[i];
+			j++;
+		}
+		i++;
 	}
-	sub[sublen] = '\0';
+	sub[j] = '\0';
 	return (sub);
 }
