@@ -6,7 +6,7 @@
 /*   By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 00:09:14 by jaeyjeon          #+#    #+#             */
-/*   Updated: 2021/12/20 01:06:35 by jaeyjeon         ###   ########.fr       */
+/*   Updated: 2021/12/20 23:54:26 by jaeyjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,12 @@ char	*ft_strndup(const char *s, size_t n)
 	char	*str;
 
 	i = 0;
+	str = NULL;
 	if (n == 0)
-		return (0);
+		return (NULL);
 	str = (char *)malloc(sizeof(char) * (n + 1));
 	if (str == 0)
-		return (0);
+		return (NULL);
 	while (i < n)
 	{
 		str[i] = s[i];
@@ -57,12 +58,9 @@ size_t	ft_wordcount(char const *s, char c)
 		return (0);
 	while (s[i] != '\0')
 	{
-		if (i == 0)
-			if (s[i] != c)
-				listsize++;
-		if (s[i] == c)
-			if (s[i + 1] != '\0' && s[i + 1] != c)
-				listsize++;
+		if ((i == 0 && s[i] != c) || \
+		(s[i] == c && s[i + 1] != '\0' && s[i + 1] != c))
+			listsize++;
 		i++;
 	}
 	return (listsize);
@@ -79,7 +77,6 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	j = 0;
 	k = 0;
-	save = 0;
 	strlist = (char **)malloc(sizeof(char *) * ft_wordcount(s, c) + 1);
 	if (!strlist)
 		return (NULL);
@@ -104,4 +101,19 @@ char	**ft_split(char const *s, char c)
 	}
 	strlist[i] = 0;
 	return (strlist);
+}
+
+#include <stdio.h>
+
+int main()
+{
+	char **str;
+	int i;
+	i = 0;
+	str = ft_split("aa33444aa232aa5555a42134a4a233aaaaaaac", 'a');
+	while (str[i])
+	{
+		printf("%s\n",str[i]);
+		i++;
+	}
 }
