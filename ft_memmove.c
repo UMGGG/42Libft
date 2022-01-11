@@ -6,7 +6,7 @@
 /*   By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 16:25:25 by jaeyjeon          #+#    #+#             */
-/*   Updated: 2022/01/07 17:43:27 by jaeyjeon         ###   ########.fr       */
+/*   Updated: 2022/01/12 00:01:51 by jaeyjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_memmove(void *dst, const void *src, size_t l)
 	i = 0;
 	if (src == NULL && dst == NULL)
 		return (dst);
-	if (dst < src)
+	if (dst <= src)
 	{
 		while (i < l)
 		{

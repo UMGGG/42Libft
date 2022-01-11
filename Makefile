@@ -6,7 +6,7 @@
 #    By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/20 19:29:07 by jaeyjeon          #+#    #+#              #
-#    Updated: 2021/12/24 18:48:40 by jaeyjeon         ###   ########.fr        #
+#    Updated: 2022/01/11 23:47:21 by jaeyjeon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRCS		= ft_memset.c ft_memmove.c ft_memcpy.c ft_isprint.c ft_isdigit.c \
 				ft_strrchr.c ft_strlen.c ft_memchr.c ft_memcmp.c ft_strnstr.c \
 				ft_strncmp.c ft_atoi.c ft_calloc.c ft_strdup.c ft_substr.c \
 				ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_striteri.c \
-				ft_strmapi.c ft_putchar_fd.c ft_putchar_fd.c ft_putendl_fd.c \
+				ft_strmapi.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c \
 				ft_putnbr_fd.c
 
 SRCS_BONUS	= ft_lstnew.c
@@ -33,14 +33,14 @@ OBJS_BONUS	= $(SRCS_BONUS:.c=.o)
 
 all:		$(NAME)
 
-bonus:		$(BONUS)
+.c.o:
+		${CC} ${CFLAGS} -g -c $< -o ${<:.c=.o}
 
-$(BONUS):
-				@make OBJS='$(SRCS:.c=.o) $(BONUS_OBJS)'
+$(NAME):	$(OBJS)
+				ar crs $(NAME) $(OBJS)
 
-$(NAME):
-				$(CC) $(CFLAGS) -c $(SRCS) libft.h
-				ar rcs $(NAME) $(OBJS)
+bonus:		$(OBJS) $(OBJS_BONUS)
+				ar crs $(NAME) $(OBJS) $(OBJS_BONUS)
 
 clean:
 				$(RM) $(OBJS) $(OBJS_BONUS)
