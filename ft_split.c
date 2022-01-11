@@ -6,7 +6,7 @@
 /*   By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 00:09:14 by jaeyjeon          #+#    #+#             */
-/*   Updated: 2021/12/20 23:54:26 by jaeyjeon         ###   ########.fr       */
+/*   Updated: 2021/12/21 17:14:06 by jaeyjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,19 +101,4 @@ char	**ft_split(char const *s, char c)
 	}
 	strlist[i] = 0;
 	return (strlist);
-}
-
-#include <stdio.h>
-
-int main()
-{
-	char **str;
-	int i;
-	i = 0;
-	str = ft_split("aa33444aa232aa5555a42134a4a233aaaaaaac", 'a');
-	while (str[i])
-	{
-		printf("%s\n",str[i]);
-		i++;
-	}
 }

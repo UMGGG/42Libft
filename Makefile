@@ -6,7 +6,7 @@
 #    By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/20 19:29:07 by jaeyjeon          #+#    #+#              #
-#    Updated: 2021/12/21 17:11:42 by jaeyjeon         ###   ########.fr        #
+#    Updated: 2021/12/24 18:48:40 by jaeyjeon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ SRCS		= ft_memset.c ft_memmove.c ft_memcpy.c ft_isprint.c ft_isdigit.c \
 				ft_strmapi.c ft_putchar_fd.c ft_putchar_fd.c ft_putendl_fd.c \
 				ft_putnbr_fd.c
 
-SRCS_BONUS	=
+SRCS_BONUS	= ft_lstnew.c
 
 OBJS		= $(SRCS:.c=.o)
 
@@ -35,8 +35,8 @@ all:		$(NAME)
 
 bonus:		$(BONUS)
 
-$(BONUS):		$(CC) $(CFLAGS) -c $(SRCS_BONUS) libft.h
-				ar rcs $(BONUS) $(OBJS_BONUS)
+$(BONUS):
+				@make OBJS='$(SRCS:.c=.o) $(BONUS_OBJS)'
 
 $(NAME):
 				$(CC) $(CFLAGS) -c $(SRCS) libft.h
@@ -51,4 +51,4 @@ fclean:		clean
 
 re:			fclean $(NAME)
 
-.PHONY:		all clean fclean re bonus
+.PHONY:		bonus all clean fclean re
