@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+        */
+/*   By: jaeyjeon <jaeyjeon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 00:09:14 by jaeyjeon          #+#    #+#             */
-/*   Updated: 2021/12/21 17:14:06 by jaeyjeon         ###   ########.fr       */
+/*   Updated: 2022/01/12 16:55:07 by jaeyjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,34 +70,24 @@ char	**ft_split(char const *s, char c)
 {
 	char	**strlist;
 	size_t	i;
-	size_t	j;
 	size_t	k;
 	size_t	save;
 
 	i = 0;
-	j = 0;
 	k = 0;
 	strlist = (char **)malloc(sizeof(char *) * ft_wordcount(s, c) + 1);
 	if (!strlist)
 		return (NULL);
 	while (i < ft_wordcount(s, c) && s[k] != '\0')
 	{
-		if (s[k] == c)
+		while (s[k] == c)
 			k++;
-		else
-		{
-			save = k;
-			while (s[k] != c && s[k] != '\0')
-			{
-				j++;
-				k++;
-			}
-			strlist[i] = ft_strndup(&s[save], j);
-			if (strlist[i] == 0)
-				return (ft_freeall(strlist));
-			i++;
-			j = 0;
-		}
+		save = k;
+		while (s[k] != c && s[k] != '\0')
+			k++;
+		strlist[i] = ft_strndup(&s[save], k - save);
+		if (strlist[i++] == 0)
+			return (ft_freeall(strlist));
 	}
 	strlist[i] = 0;
 	return (strlist);

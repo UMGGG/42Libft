@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jaeyjeon <jaeyjeon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/20 16:10:57 by jaeyjeon          #+#    #+#             */
-/*   Updated: 2022/01/12 16:56:34 by jaeyjeon         ###   ########.fr       */
+/*   Created: 2022/01/12 10:12:34 by jaeyjeon          #+#    #+#             */
+/*   Updated: 2022/01/12 14:21:43 by jaeyjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+int	ft_lstsize(t_list *lst)
 {
-	size_t	i;
+	int		count;
+	t_list	*testnode;
 
-	i = 0;
-	if (dst == src)
-		return (dst);
-	while (i < n)
+	count = 0;
+	testnode = lst;
+	while (testnode != NULL)
 	{
-		((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
-		i++;
+		testnode = testnode->next;
+		count++;
 	}
-	return (dst);
+	return (count);
 }

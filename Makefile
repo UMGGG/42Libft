@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+         #
+#    By: jaeyjeon <jaeyjeon@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/20 19:29:07 by jaeyjeon          #+#    #+#              #
-#    Updated: 2022/01/11 23:47:21 by jaeyjeon         ###   ########.fr        #
+#    Updated: 2022/01/12 16:56:34 by jaeyjeon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,9 @@ SRCS		= ft_memset.c ft_memmove.c ft_memcpy.c ft_isprint.c ft_isdigit.c \
 				ft_strmapi.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c \
 				ft_putnbr_fd.c
 
-SRCS_BONUS	= ft_lstnew.c
+SRCS_BONUS	= ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
+				ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c \
+				ft_lstmap.c
 
 OBJS		= $(SRCS:.c=.o)
 

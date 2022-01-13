@@ -3,14 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+        */
+/*   By: jaeyjeon <jaeyjeon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 02:07:50 by jaeyjeon          #+#    #+#             */
-/*   Updated: 2021/12/20 01:30:13 by jaeyjeon         ###   ########.fr       */
+/*   Updated: 2022/01/12 17:48:51 by jaeyjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+char	*ft_startcheck(void)
+{
+	char	*rtv;
+
+	rtv = malloc(sizeof(char));
+	if (rtv == 0)
+		return (NULL);
+	rtv[0] = '\0';
+	return (rtv);
+}
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -22,6 +33,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	j = 0;
 	if (!s)
 		return (NULL);
+	if (ft_strlen(s) < start)
+		return (ft_startcheck());
 	sub = (char *)malloc(sizeof(char) * (len + 1));
 	if (sub == 0)
 		return (NULL);
