@@ -6,11 +6,12 @@
 /*   By: jaeyjeon <jaeyjeon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 00:09:14 by jaeyjeon          #+#    #+#             */
-/*   Updated: 2022/01/12 16:55:07 by jaeyjeon         ###   ########.fr       */
+/*   Updated: 2022/01/13 18:00:35 by jaeyjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include<stdio.h>
 
 char	*ft_strndup(const char *s, size_t n)
 {
@@ -38,7 +39,7 @@ char	**ft_freeall(char **list)
 	size_t	j;
 
 	j = 0;
-	while (!list[j])
+	while (list[j])
 	{
 		free(list[j]);
 		j++;

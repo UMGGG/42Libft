@@ -6,7 +6,7 @@
 #    By: jaeyjeon <jaeyjeon@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/20 19:29:07 by jaeyjeon          #+#    #+#              #
-#    Updated: 2022/01/12 16:56:34 by jaeyjeon         ###   ########.fr        #
+#    Updated: 2022/01/12 19:05:34 by jaeyjeon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,16 +33,25 @@ OBJS		= $(SRCS:.c=.o)
 
 OBJS_BONUS	= $(SRCS_BONUS:.c=.o)
 
+ifdef WITH_BONUS
+	OBJ_FILES = $(OBJS) $(OBJS_BONUS)
+else
+	OBJ_FILES = $(OBJS)
+endif
+
 all:		$(NAME)
+
+debug :
+	gcc -g ft_split.c libft.h
 
 .c.o:
 		${CC} ${CFLAGS} -g -c $< -o ${<:.c=.o}
 
-$(NAME):	$(OBJS)
-				ar crs $(NAME) $(OBJS)
+$(NAME):	$(OBJ_FILES)
+				ar crs $(NAME) $(OBJ_FILES)
 
-bonus:		$(OBJS) $(OBJS_BONUS)
-				ar crs $(NAME) $(OBJS) $(OBJS_BONUS)
+bonus : 
+	make WITH_BONUS=1 all
 
 clean:
 				$(RM) $(OBJS) $(OBJS_BONUS)
