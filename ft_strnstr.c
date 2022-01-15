@@ -6,7 +6,7 @@
 /*   By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 16:48:42 by jaeyjeon          #+#    #+#             */
-/*   Updated: 2021/11/28 18:06:44 by jaeyjeon         ###   ########.fr       */
+/*   Updated: 2022/01/15 19:43:37 by jaeyjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,5 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		j = 0;
 		i++;
 	}
-	return (0);
+	return (NULL);
 }

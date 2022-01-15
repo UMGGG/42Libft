@@ -6,7 +6,7 @@
 /*   By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 14:35:01 by jaeyjeon          #+#    #+#             */
-/*   Updated: 2022/01/15 17:45:39 by jaeyjeon         ###   ########.fr       */
+/*   Updated: 2022/01/15 19:35:21 by jaeyjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,4 @@ char	*ft_strrchr(const char *s, int c)
 		i--;
 	}
 	return (NULL);
-}
-#include <stdio.h>
-int main()
-{
-	printf("%s  ",ft_strrchr("asdasdasd",'\0'));
 }
