@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaeyjeon <jaeyjeon@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 00:09:14 by jaeyjeon          #+#    #+#             */
-/*   Updated: 2022/01/13 18:00:35 by jaeyjeon         ###   ########.fr       */
+/*   Updated: 2022/01/13 21:51:24 by jaeyjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	k = 0;
-	strlist = (char **)malloc(sizeof(char *) * ft_wordcount(s, c) + 1);
+	strlist = (char **)malloc(sizeof(char *) * (ft_wordcount(s, c) + 1));
 	if (!strlist)
 		return (NULL);
 	while (i < ft_wordcount(s, c) && s[k] != '\0')

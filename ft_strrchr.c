@@ -6,7 +6,7 @@
 /*   By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 14:35:01 by jaeyjeon          #+#    #+#             */
-/*   Updated: 2021/11/24 16:10:00 by jaeyjeon         ###   ########.fr       */
+/*   Updated: 2022/01/15 17:45:39 by jaeyjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,16 @@ char	*ft_strrchr(const char *s, int c)
 	i = ft_strlen(s);
 	while (i >= 0)
 	{
-		if (s[i] == (char)c)
+		if (s[i] == (unsigned char)c)
 		{
 			return ((char *)s + i);
 		}
 		i--;
 	}
-	return (0);
+	return (NULL);
+}
+#include <stdio.h>
+int main()
+{
+	printf("%s  ",ft_strrchr("asdasdasd",'\0'));
 }

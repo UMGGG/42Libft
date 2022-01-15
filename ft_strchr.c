@@ -6,7 +6,7 @@
 /*   By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 13:34:19 by jaeyjeon          #+#    #+#             */
-/*   Updated: 2021/11/28 01:40:12 by jaeyjeon         ###   ########.fr       */
+/*   Updated: 2022/01/15 17:41:35 by jaeyjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,18 +17,20 @@ char	*ft_strchr(const char *s, int c)
 	int	i;
 
 	i = 0;
+	if (s == NULL)
+		return (NULL);
 	while (1)
 	{
-		if (s[i] == (char)c)
+		if (s[i] == (unsigned char)c)
 			return ((char *)s + i);
 		if (s[i] == '\0')
 		{
-			if ((char)c == '\0')
+			if ((unsigned char)c == '\0')
 				return ((char *)s + i);
 			else
 				break ;
 		}
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
