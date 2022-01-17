@@ -6,7 +6,7 @@
 /*   By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 20:09:28 by jaeyjeon          #+#    #+#             */
-/*   Updated: 2021/12/13 00:00:34 by jaeyjeon         ###   ########.fr       */
+/*   Updated: 2022/01/16 02:32:15 by jaeyjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	i = 0;
 	j = ft_strlen(s1);
-	if (s1 == 0)
-		return (0);
 	while (s1[i] && checkchar(s1[i], set))
 		i++;
 	while (s1[j - 1] && checkchar(s1[j], set) && i < j)

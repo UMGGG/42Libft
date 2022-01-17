@@ -6,7 +6,7 @@
 /*   By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/21 16:27:19 by jaeyjeon          #+#    #+#             */
-/*   Updated: 2021/12/21 16:29:25 by jaeyjeon         ###   ########.fr       */
+/*   Updated: 2022/01/15 21:03:32 by jaeyjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	if (s == 0 || fd < 0)
+	if (fd < 0)
 		return ;
 	write(fd, s, ft_strlen(s));
 	write(fd, "\n", 1);

@@ -6,12 +6,11 @@
 /*   By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 00:09:14 by jaeyjeon          #+#    #+#             */
-/*   Updated: 2022/01/13 21:51:24 by jaeyjeon         ###   ########.fr       */
+/*   Updated: 2022/01/16 18:03:01 by jaeyjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include<stdio.h>
 
 char	*ft_strndup(const char *s, size_t n)
 {
@@ -55,8 +54,6 @@ size_t	ft_wordcount(char const *s, char c)
 
 	i = 0;
 	listsize = 0;
-	if (s == 0)
-		return (0);
 	while (s[i] != '\0')
 	{
 		if ((i == 0 && s[i] != c) || \
@@ -90,6 +87,6 @@ char	**ft_split(char const *s, char c)
 		if (strlist[i++] == 0)
 			return (ft_freeall(strlist));
 	}
-	strlist[i] = 0;
+	strlist[i] = NULL;
 	return (strlist);
 }

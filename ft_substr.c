@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaeyjeon <jaeyjeon@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 02:07:50 by jaeyjeon          #+#    #+#             */
-/*   Updated: 2022/01/12 18:10:43 by jaeyjeon         ###   ########.fr       */
+/*   Updated: 2022/01/16 02:48:38 by jaeyjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	i = 0;
 	j = 0;
-	if (!s)
-		return (NULL);
 	if (ft_strlen(s) < start)
 		return (ft_startcheck());
 	sub = (char *)malloc(sizeof(char) * (lencheck(s, start, len) + 1));

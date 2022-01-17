@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaeyjeon <jaeyjeon@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 11:30:11 by jaeyjeon          #+#    #+#             */
-/*   Updated: 2022/01/12 15:29:32 by jaeyjeon         ###   ########.fr       */
+/*   Updated: 2022/01/16 03:03:42 by jaeyjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*testnode;
 
-	if (lst == NULL || new == NULL)
-		return ;
 	if (*lst == NULL)
 		*lst = new;
 	else

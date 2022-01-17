@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaeyjeon <jaeyjeon@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 14:28:32 by jaeyjeon          #+#    #+#             */
-/*   Updated: 2022/01/12 15:30:16 by jaeyjeon         ###   ########.fr       */
+/*   Updated: 2022/01/16 03:18:43 by jaeyjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	t_list	*save;
 
-	if (lst == NULL || f == NULL)
-		return ;
 	save = lst;
 	while (save != NULL)
 	{
