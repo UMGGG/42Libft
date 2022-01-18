@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jaeyjeon <jaeyjeon@student.42.fr>          +#+  +:+       +#+         #
+#    By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/20 19:29:07 by jaeyjeon          #+#    #+#              #
-#    Updated: 2022/01/12 19:05:34 by jaeyjeon         ###   ########.fr        #
+#    Updated: 2022/01/18 23:34:26 by jaeyjeon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,17 +41,14 @@ endif
 
 all:		$(NAME)
 
-debug :
-	gcc -g ft_split.c libft.h
-
 .c.o:
-		${CC} ${CFLAGS} -g -c $< -o ${<:.c=.o}
+		${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 $(NAME):	$(OBJ_FILES)
 				ar crs $(NAME) $(OBJ_FILES)
 
-bonus : 
-	make WITH_BONUS=1 all
+bonus :
+	make WITH_BONUS=0 all
 
 clean:
 				$(RM) $(OBJS) $(OBJS_BONUS)

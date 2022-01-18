@@ -6,7 +6,7 @@
 /*   By: jaeyjeon <@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 14:57:31 by jaeyjeon          #+#    #+#             */
-/*   Updated: 2022/01/16 03:23:07 by jaeyjeon         ###   ########.fr       */
+/*   Updated: 2022/01/18 19:04:25 by jaeyjeon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		if (newnode == NULL)
 		{
 			ft_lstclear(&newlist, del);
-			return ((void *)(0));
+			return (NULL);
 		}
 		ft_lstadd_back(&newlist, newnode);
 		savenode = savenode->next;
